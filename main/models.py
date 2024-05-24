@@ -44,3 +44,11 @@ class Info(models.Model):
     twitter = models.CharField(max_length=255)
     instagramm = models.CharField(max_length=255)
 
+
+class Birja(models.Model):
+    image = models.ImageField(upload_to='birja_photo/')
+    name = models.CharField(max_length=255)
+    projects = models.IntegerField()
+    bujet = models.DecimalField(max_digits=10, decimal_places=2)
+    data = models.DateTimeField(default=0)
+    offers = models.IntegerField()
